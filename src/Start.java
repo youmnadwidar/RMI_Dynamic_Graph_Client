@@ -14,8 +14,8 @@ public class Start {
         Client client = new Client("system.properties");
         client.getObject("rmi://localhost:6000/graph");
         Scanner scanner = new Scanner(System.in);
-        int numOfRequests = scanner.nextInt();
-        double writePercentage = scanner.nextInt() / 100.0;
+        int numOfRequests = Integer.parseInt(args[0]);
+        double writePercentage = Integer.parseInt(args[1]) / 100.0;
         for (int i = 0; i < numOfRequests; i++) {
             Operation operation = client.getOperation(writePercentage);
             int count = operationCount.getOrDefault(operation.getType(), 0);

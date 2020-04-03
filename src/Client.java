@@ -13,7 +13,7 @@ import java.util.Random;
 public class Client {
 
     private static char[] operations = {'Q', 'A', 'D'};
-    private final int MAX = 10;
+    private final int MAX = 100;
     GraphInterface remoteObject;
     private Properties properties;
 
